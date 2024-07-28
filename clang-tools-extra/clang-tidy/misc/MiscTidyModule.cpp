@@ -32,6 +32,7 @@
 #include "UnusedUsingDeclsCheck.h"
 #include "UseAnonymousNamespaceCheck.h"
 #include "UseInternalLinkageCheck.h"
+#include "DeprecatedFunctionCheck.h"
 
 namespace clang::tidy {
 namespace misc {
@@ -81,6 +82,8 @@ public:
         "misc-use-anonymous-namespace");
     CheckFactories.registerCheck<UseInternalLinkageCheck>(
         "misc-use-internal-linkage");
+    CheckFactories.registerCheck<DeprecatedFunctionCheck>(
+        "misc-deprecated-function");
   }
 };
 
